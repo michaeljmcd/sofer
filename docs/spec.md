@@ -1,4 +1,6 @@
-# Sofer - A Mobile Application for Etext Transcription #
+% Sofer - A Mobile Application for Etext Transcription 
+% Michael McDermott
+% January 31, 2015
 
 In my time, I have transcribed a few etexts for Project Gutenberg, mostly in the
 area of more obscure authors and topics that do not have convenient etexts
@@ -42,7 +44,15 @@ Due to the intrinsic difficulty in determining the precise device type being
 used, the "tablet" view will always be displayed for landscape oriented devices
 and the "phone" view will always be displayed for portrait oriented devices.
 
-### Main Screen ###
+Throughout, the expectation is that the converted etext will be compiled in
+Markdown. There are several reasons for this. First, components are common for
+Markdown editors and the syntax is well-known. This makes it a prime candidated
+right off the bat. The second reason is that Pandoc allows for ready conversion
+of Markdown, both to other lightweight text-markup languages (like reStructured
+Text, which is favored by Project Gutenberg) and to other, more sophisticated
+destinations (like PDF and Word document).
+
+### Main Screen / About Dialog ###
 
 Upon starting the application, the main screen should be displayed. The last
 transcription project should be loaded, if one already exists. The basic
@@ -56,18 +66,37 @@ likely when one set of scans is less than ideal and is supplemented by a second
 set of scans).
 
 The right-hand pane should be a Markdown editor that displays the text as
-currently provided by the user.
+currently provided by the user. Proper syntax-highlighting of the Markdown text
+should be provided.
 
 Finally, the top bar should provide menu options for various common operations
 that the user may need to take.
 
 The phone view of this same screen would have the following layout:
 
-![Main Screen - Phone View](img/main-screen-phone.png)
+![Main Screen: Scan View - Phone View](img/main-screen-phone.png)
 
 In both mockups, the items in the toolbar expand out to menus. In the latter
 mockup, the Source, Text and About items are in an accordion view in order to
 save space. Figures demonstrating the expansions of the other tabs are
 demonstrated below.
 
-![Main Screen - Phone View](img/main-screen-phone2.png)
+![Main Screen: Text View - Phone View](img/main-screen-phone2.png)
+
+Since the third and final accordion for the phone is a replacement for the About
+dialog, both will be displayed below, in sequence.
+
+![About Screen - Tablet View](img/about-screen-tablet.png)
+
+The hyperlink in the dialog should navigate to
+http://opensource.org/licenses/MIT. Any navigations that need to be added to
+comply with the licenses of libraries used in development should be added here.
+If it ever becomes necessary (and it would be preferrable for it not to), a
+scrollbar will be considered acceptable.
+
+![About Screen - Phone View](img/about-screen-phone.png)
+
+### Text Operations ###
+
+Aside from the controls to be used on the text editor and the PDF viewer, the
+text operations might be the most commonly used controls in the application.
