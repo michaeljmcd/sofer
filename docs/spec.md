@@ -36,6 +36,10 @@ is available or that the sample was not workable with OCR.
 
 ## Screen Layouts ##
 
+The mockups that follow are not pixel perfect. They are intended only as
+wireframes to demonstrate basic functionality, layout and interaction. More
+effective styling will be required in the finished project.
+
 In the mockups that follow, a simple forbidden icon is used to indicate an
 unspecified icon. That is to say, the icon's precise appearance is not dictated
 in the mockup, but its presence is.
@@ -102,12 +106,63 @@ Project operations are those options that are exposed from the Project menu.
 
 ![Project Menu - Tablet View](img/project-menu-tablet.png)
 
+![Project Menu - Phone View](img/project-menu-phone.png)
+
+We will review each of these operations in turn.
+
+#### Saving ####
+
 Clicking the Save option should cause the project to be saved. The total format
 of the project save format is not included in this document, but it is a
 requirement that all artifacts of the project, including configuration, scans
 and output texts should be saved a single file for simple portability.
 
 ![Save Confirm - Tablet View](img/save-confirm-tablet.png)
+
+The save confirmation for the phone has a similar appearance.
+
+![Save Confirm - Phone View](img/save-confirm-phone.png)
+
+#### Creating a New Project ####
+
+Fairly little is needed to create a new project. On the tablet version of the
+workflow, it will all be done on a single screen:
+
+![New Project - Tablet View](img/new-project-step1-tablet.png)
+
+A project name is required. No specific length restrictions are intended, though
+the device may impose a restriction.
+
+Any form of recognizable text document (`*.txt` or `*.md`, for example) should
+be provided for the starting text. This is expected to be a text file returned
+by an OCR program. Since this is not needed (transcription can be entirely
+in-app, without the aid of OCR), this field must be optional. If it is not
+provided, a blank file should be added to the project in its place.
+
+Scans are also not required. It would make little sense to start with no text
+and no scans, but, since scans can be added after the fact, it is not required
+to add any before starting.
+
+For the tablet view, all that would be necessary would be to provide a project
+name and click the Start Project button.
+
+All of the actual restrictions are shared between the two versions. The only
+difference to be aware of is that, where the tablet version has a single step,
+the phone view shall have three: one for each of the steps.
+
+TODO: Add the phone view here
+
+#### Sharing Completed Text ####
+
+There are not really any mockups to be added for this piece of functionality.
+Rather than going through some sophisticated workflow, all this option should do
+is extract the proofed text from the project file and attempt to share it
+through the local systems sharing capability.
+
+Where it goes and what it does are entirely up to the user's interaction with
+the system component.
+
+#### Quit ####
 
 ### Text Operations ###
 
