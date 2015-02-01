@@ -96,7 +96,28 @@ scrollbar will be considered acceptable.
 
 ![About Screen - Phone View](img/about-screen-phone.png)
 
+### Project Operations ###
+
+Project operations are those options that are exposed from the Project menu.
+
+![Project Menu - Tablet View](img/project-menu-tablet.png)
+
+Clicking the Save option should cause the project to be saved. The total format
+of the project save format is not included in this document, but it is a
+requirement that all artifacts of the project, including configuration, scans
+and output texts should be saved a single file for simple portability.
+
+![Save Confirm - Tablet View](img/save-confirm-tablet.png)
+
 ### Text Operations ###
 
 Aside from the controls to be used on the text editor and the PDF viewer, the
 text operations might be the most commonly used controls in the application.
+
+The menu itself, for both phone and tablet views is displayed below:
+
+![Text Menu - Tablet View](img/text-menu-tablet.png)
+
+![Text Menu - Phone View](img/text-menu-phone.png)
+
+We will address each of the features exposed by this menu in turn.
