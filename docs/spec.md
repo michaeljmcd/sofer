@@ -34,5 +34,40 @@ is available or that the sample was not workable with OCR.
 
 ## Screen Layouts ##
 
+In the mockups that follow, a simple forbidden icon is used to indicate an
+unspecified icon. That is to say, the icon's precise appearance is not dictated
+in the mockup, but its presence is.
+
+Due to the intrinsic difficulty in determining the precise device type being
+used, the "tablet" view will always be displayed for landscape oriented devices
+and the "phone" view will always be displayed for portrait oriented devices.
+
+### Main Screen ###
+
 Upon starting the application, the main screen should be displayed. The last
-transcription project should be loaded, if one already exists.
+transcription project should be loaded, if one already exists. The basic
+workspace should have the following layout:
+
+![Main Screen - Tablet View](img/main-screen-tablet.png)
+
+The left-most pane should display the selected scanset (it should be possible to
+have multiple scansets associated with a single text conversion; this is most
+likely when one set of scans is less than ideal and is supplemented by a second
+set of scans).
+
+The right-hand pane should be a Markdown editor that displays the text as
+currently provided by the user.
+
+Finally, the top bar should provide menu options for various common operations
+that the user may need to take.
+
+The phone view of this same screen would have the following layout:
+
+![Main Screen - Phone View](img/main-screen-phone.png)
+
+In both mockups, the items in the toolbar expand out to menus. In the latter
+mockup, the Source, Text and About items are in an accordion view in order to
+save space. Figures demonstrating the expansions of the other tabs are
+demonstrated below.
+
+![Main Screen - Phone View](img/main-screen-phone2.png)
