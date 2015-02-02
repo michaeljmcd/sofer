@@ -150,7 +150,11 @@ All of the actual restrictions are shared between the two versions. The only
 difference to be aware of is that, where the tablet version has a single step,
 the phone view shall have three: one for each of the steps.
 
-TODO: Add the phone view here
+![New Project: Step 1 - Phone View](img/new-project-step1-phone.png)
+
+![New Project: Step 2 - Phone View](img/new-project-step2-phone.png)
+
+![New Project: Step 3 - Phone View](img/new-project-step3-phone.png)
 
 #### Sharing Completed Text ####
 
@@ -163,6 +167,12 @@ Where it goes and what it does are entirely up to the user's interaction with
 the system component.
 
 #### Quit ####
+
+The quit option should terminate the application and return the user to the main
+operating system.
+
+If a project is in progress and has had changes made, a prompt should be
+displayed asking whether the project ought to be saved first.
 
 ### Text Operations ###
 
