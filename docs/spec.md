@@ -186,3 +186,17 @@ The menu itself, for both phone and tablet views is displayed below:
 ![Text Menu - Phone View](img/text-menu-phone.png)
 
 We will address each of the features exposed by this menu in turn.
+
+#### Spell Check ####
+
+#### Insert Image from Scan ####
+
+#### Images ####
+
+#### Scans ####
+
+#### Syntax Overview ####
+
+## Conclusion ##
+
+This is still considered an early version draft. Changes are to be expected. 
