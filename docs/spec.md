@@ -191,11 +191,23 @@ We will address each of the features exposed by this menu in turn.
 
 #### Insert Image from Scan ####
 
+Some etexts cannot really be presented
+
 #### Images ####
 
 #### Scans ####
 
 #### Syntax Overview ####
+
+This screen will display a quick cheatsheet for the basic usage of its markup language.
+Since we are using Markdown for this purpose, a summary of general Markdown syntax will
+be displayed.
+
+The mockups for the tablet and phone versions of this screen follow.
+
+![Syntax Overview - Tablet View](img/syntax-overview-tablet.png)
+
+![Syntax Overview - Phone View](img/syntax-overview-phone.png)
 
 ## Conclusion ##
 
