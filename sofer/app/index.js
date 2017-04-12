@@ -16,6 +16,8 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+require('jquery-mobile/dist/jquery.mobile.min.css');
+var $ = require('jquery');
 var app = {
     // Application Constructor
     initialize: function() {
