@@ -16,8 +16,12 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-require('jquery-mobile/dist/jquery.mobile.min.css');
+
 var $ = require('jquery');
+//import { $ } from 'jquery';
+import { render } from 'react-dom';
+import { Main } from './main.jsx';
+
 var app = {
     // Application Constructor
     initialize: function() {
@@ -29,7 +33,9 @@ var app = {
     // Bind any cordova events here. Common events are:
     // 'pause', 'resume', etc.
     onDeviceReady: function() {
-        //this.receivedEvent('deviceready');
+        this.receivedEvent('deviceready');
+        console.log('I am here');
+        render(<Main/>, document.getElementById('app'));
     },
 
     // Update DOM on a Received Event

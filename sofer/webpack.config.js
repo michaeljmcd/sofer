@@ -1,13 +1,14 @@
-var webpack = require('webpack');
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
+var webpack = require('webpack'),
+    ExtractTextPlugin = require('extract-text-webpack-plugin'),
+    path = require('path');
+
+var APP_DIR = path.resolve(__dirname, 'app');
 
 module.exports = {
     entry: {
-        app: './app/index.js',
+        app: APP_DIR + '/index.jsx',
         vendor: [
-            'jquery', 
-            "imports-loader?this=>window!jquery-mobile/dist/jquery.mobile.min.js", 
-            //'style-loader?css-loader!jquery-mobile/dist/jquery.mobile.min.css'
+            'jquery'
         ]
     },
     output: {
@@ -26,6 +27,12 @@ module.exports = {
             {
                 test: /\.css$/,
                 loader: ExtractTextPlugin.extract('css-loader')
+            },
+
+            {
+                test: /\.jsx?/,
+                include: APP_DIR,
+                loader: 'babel-loader'
             },
             {
 				test: /\.(jpg|png|gif)$/,
