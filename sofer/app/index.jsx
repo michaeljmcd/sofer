@@ -17,15 +17,16 @@
  * under the License.
  */
 
-var $ = require('jquery');
-//import { $ } from 'jquery';
+import { default as $ } from 'jquery';
 import { render } from 'react-dom';
 import { Main } from './main.jsx';
+import 'react';
 
 var app = {
     // Application Constructor
     initialize: function() {
-        document.addEventListener('deviceready', this.onDeviceReady.bind(this), false);
+        //document.addEventListener('deviceready', this.onDeviceReady.bind(this), false);
+        this.onDeviceReady();
     },
 
     // deviceready Event Handler
@@ -33,12 +34,14 @@ var app = {
     // Bind any cordova events here. Common events are:
     // 'pause', 'resume', etc.
     onDeviceReady: function() {
-        this.receivedEvent('deviceready');
-        console.log('I am here');
-        render(<Main/>, document.getElementById('app'));
+        //this.receivedEvent('deviceready');
+        //render(<Main/>, document.getElementById('app'));
+        //debugger;
+        render(<h1>I hate kittens</h1>, document.getElementById('app'));
     },
 
     // Update DOM on a Received Event
+    /*
     receivedEvent: function(id) {
         var parentElement = document.getElementById(id);
         var listeningElement = parentElement.querySelector('.listening');
@@ -49,6 +52,9 @@ var app = {
 
         console.log('Received Event: ' + id);
     }
+    */
 };
 
-app.initialize();
+$(document).ready(function() {
+    app.initialize();
+});
