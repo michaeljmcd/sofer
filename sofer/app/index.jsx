@@ -25,8 +25,7 @@ import 'react';
 var app = {
     // Application Constructor
     initialize: function() {
-        //document.addEventListener('deviceready', this.onDeviceReady.bind(this), false);
-        this.onDeviceReady();
+        document.addEventListener('deviceready', this.onDeviceReady.bind(this), false);
     },
 
     // deviceready Event Handler
@@ -34,14 +33,11 @@ var app = {
     // Bind any cordova events here. Common events are:
     // 'pause', 'resume', etc.
     onDeviceReady: function() {
-        //this.receivedEvent('deviceready');
-        //render(<Main/>, document.getElementById('app'));
-        //debugger;
-        render(<h1>I hate kittens</h1>, document.getElementById('app'));
+        render(<Main />, document.getElementById('app'));
+        this.receivedEvent('deviceready');
     },
 
     // Update DOM on a Received Event
-    /*
     receivedEvent: function(id) {
         var parentElement = document.getElementById(id);
         var listeningElement = parentElement.querySelector('.listening');
@@ -52,7 +48,6 @@ var app = {
 
         console.log('Received Event: ' + id);
     }
-    */
 };
 
 $(document).ready(function() {
