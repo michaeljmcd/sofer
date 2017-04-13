@@ -8,7 +8,8 @@ module.exports = {
     entry: {
         app: APP_DIR + '/index.jsx',
         vendor: [
-            'jquery'
+            'jquery',
+            'muicss/dist/js/mui.min.js'
         ]
     },
     output: {

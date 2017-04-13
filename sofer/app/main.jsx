@@ -3,7 +3,9 @@ import { render } from 'react-dom';
 
 class Main extends React.Component {
   render () {
-    return <p> Hello React!</p>;
+      return <div class="mui--text-display3">
+          <p> Hello React!</p>
+      </div>;
   }
 }
 
