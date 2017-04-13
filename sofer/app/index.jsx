@@ -19,7 +19,7 @@
 
 import { default as $ } from 'jquery';
 import { render } from 'react-dom';
-import { Main } from './main.jsx';
+import { App } from './app.jsx';
 import 'react';
 
 var app = {
@@ -33,7 +33,7 @@ var app = {
     // Bind any cordova events here. Common events are:
     // 'pause', 'resume', etc.
     onDeviceReady: function() {
-        render(<Main />, document.getElementById('app'));
+        render(<App />, document.getElementById('app'));
         this.receivedEvent('deviceready');
     },
 
