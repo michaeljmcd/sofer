@@ -13,7 +13,7 @@ class App extends React.Component {
             <div>
                 <Appbar>
                     <div>
-                        <i class="fa fa-cutlery fa-5x" aria-hidden="true"></i>
+                        <i className="fa fa-cutlery fa-5x" aria-hidden="true"></i>
                         Sopher
                     </div>
                 </Appbar>
