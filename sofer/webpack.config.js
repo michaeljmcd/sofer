@@ -13,11 +13,12 @@ module.exports = {
         ]
     },
     output: {
-        filename: 'www/js/[name].js',
+        filename: 'js/[name].js',
+        path: path.resolve(__dirname, 'www')
     },
     plugins: [
         new webpack.optimize.CommonsChunkPlugin('vendor'),
-        new ExtractTextPlugin('./www/css/app.css'),
+        new ExtractTextPlugin('css/app.css'),
         new webpack.ProvidePlugin({
             $: 'jquery',
             jQuery: 'jquery',
@@ -38,8 +39,12 @@ module.exports = {
             },
             {
 				test: /\.(jpg|png|gif)$/,
-				loader: 'file-loader?outputPath=./www/css/'
+				loader: 'file-loader?outputPath=css/'
             },
-        ]
+            {
+                test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+                loader: "file-loader?name=[name].[ext]&outputPath=/fonts/"
+            }
+     ]
     }
 };

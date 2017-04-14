@@ -34,10 +34,11 @@ var app = {
     // 'pause', 'resume', etc.
     onDeviceReady: function() {
         render(<App />, document.getElementById('app'));
-        this.receivedEvent('deviceready');
+        //this.receivedEvent('deviceready');
     },
 
     // Update DOM on a Received Event
+    /*
     receivedEvent: function(id) {
         var parentElement = document.getElementById(id);
         var listeningElement = parentElement.querySelector('.listening');
@@ -48,6 +49,7 @@ var app = {
 
         console.log('Received Event: ' + id);
     }
+    */
 };
 
 $(document).ready(function() {
