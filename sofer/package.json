@@ -8,7 +8,9 @@
     "url": "https://github.com/michaeljmcd/sofer.git"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start-webpack": "webpack -w",
+    "dev-server": "./node_modules/.bin/webpack-dev-server"
   },
   "author": "Michael McDermott",
   "license": "MIT",
@@ -31,6 +33,7 @@
     "imports-loader": "^0.7.1",
     "less": "^2.7.2",
     "url-loader": "^0.5.8",
-    "webpack": "^2.3.3"
+    "webpack": "^2.3.3",
+    "webpack-dev-server": "^2.4.2"
   }
 }

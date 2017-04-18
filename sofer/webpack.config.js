@@ -8,7 +8,6 @@ module.exports = {
     entry: {
         app: APP_DIR + '/index.jsx',
         vendor: [
-            'jquery',
             'muicss/dist/js/mui.min.js'
         ]
     },
@@ -46,5 +45,10 @@ module.exports = {
                 loader: "file-loader?name=[name].[ext]&outputPath=/fonts/"
             }
      ]
+    },
+    devServer: {
+      contentBase: path.join(__dirname, "www"),
+      compress: true,
+      port: 9000
     }
 };
