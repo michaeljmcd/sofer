@@ -10,6 +10,7 @@ import { Footer } from './main/footer.jsx';
 
 import css from 'muicss/dist/css/mui.min.css';
 import css2 from 'font-awesome/css/font-awesome.css';
+import css3 from './main/main.css';
 
 class App extends React.Component {
     render() {
