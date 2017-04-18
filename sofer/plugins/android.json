@@ -9,6 +9,9 @@
     "installed_plugins": {
         "cordova-plugin-whitelist": {
             "PACKAGE_NAME": "com.madcomputerscientist.Sofer"
+        },
+        "cordova-plugin-browsersync": {
+            "PACKAGE_NAME": "com.madcomputerscientist.Sofer"
         }
     },
     "dependent_plugins": {}
