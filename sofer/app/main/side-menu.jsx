@@ -4,10 +4,21 @@ import Appbar from 'muicss/lib/react/appbar';
 import Container from 'muicss/lib/react/container';
 
 class SideMenu extends React.Component {
+    constructor() {
+        super();
+
+        this.state = {
+            drawerClasses: ['mui--no-user-select', 'hide-sidedrawer']
+        };
+
+        this.showSideDrawer = this.showSideDrawer.bind(this);
+        this.hideSideDrawer = this.hideSideDrawer.bind(this);
+    }
+
     render() {
         return (
             <div>
-            <div id="sidedrawer" className="mui--no-user-select hide-sidedrawer">
+            <div id="sidedrawer" className={this.state.drawerClasses.join(' ')}>
                 <div id="sidedrawer-brand" className="mui--appbar-line-height">
                   <span className="mui--text-title">Brand.io</span>
                 </div>
@@ -42,14 +53,29 @@ class SideMenu extends React.Component {
                 <header>
                     <Appbar>
                         <Container>
-                              <a className="sidedrawer-toggle mui--visible-xs-inline-block mui--visible-sm-inline-block js-show-sidedrawer">☰</a>
-                              <a className="sidedrawer-toggle mui--hidden-xs mui--hidden-sm js-hide-sidedrawer">☰</a>
+                              <a className="sidedrawer-toggle mui--visible-xs-inline-block mui--visible-sm-inline-block js-show-sidedrawer" onClick={this.showSideDrawer}>☰</a>
+                              <a className="sidedrawer-toggle mui--hidden-xs mui--hidden-sm js-hide-sidedrawer" onClick={this.hideSideDrawer}>☰</a>
                               <span className="mui--text-title mui--visible-xs-inline-block">Sofer</span>
                         </Container>
                     </Appbar>
                  </header>
              </div>
         );
+    }
+
+    showSideDrawer() {
+        //this.drawerClasses.push('active');
+        this.setState({
+            drawerClasses: ['mui--no-user-select', 'hide-sidedrawer', 'active']
+        });
+
+    }
+
+    hideSideDrawer() {
+        //this.drawerClasses.pop();
+        this.setState({
+            drawerClasses: ['mui--no-user-select', 'hide-sidedrawer']
+        });
     }
 
 /*
