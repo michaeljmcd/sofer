@@ -3,7 +3,7 @@ import { render } from 'react-dom';
 
 class Main extends React.Component {
   render () {
-      return (<div>
+      return (<div id="content-wrapper">
         <div className="mui--appbar-height"></div>
         <div className="mui-container-fluid">
             <br />

@@ -1,7 +1,5 @@
 import React from 'react';
 import { render } from 'react-dom';
-import Appbar from 'muicss/lib/react/appbar';
-import Container from 'muicss/lib/react/container';
 
 class MenuContent extends React.Component {
     constructor(props) {
@@ -66,14 +64,14 @@ class SideMenu extends React.Component {
                         <MenuContent isExpanded={this.state.menuExpanded} />
                     </div>}
                 {(!this.state.menuExpanded) && <MenuContent isExpanded={this.state.menuExpanded} />}
-                <header>
-                    <Appbar>
-                        <Container>
+                <header id="header">
+                    <div className="mui-appbar mui--appbar-line-height">
+                        <div className="mui-container-fluid">
                               <a className="sidedrawer-toggle mui--visible-xs-inline-block mui--visible-sm-inline-block js-show-sidedrawer" onClick={this.showSideDrawer}>☰</a>
                               <a className="sidedrawer-toggle mui--hidden-xs mui--hidden-sm js-hide-sidedrawer" onClick={this.hideSideDrawer}>☰</a>
-                              <span className="mui--text-title mui--visible-xs-inline-block">Sofer</span>
-                        </Container>
-                    </Appbar>
+                              <span className="mui--text-title mui--visible-xs-inline-block mui--visible-sm-inline-block">Sofer</span>
+                        </div>
+                     </div>
                  </header>
              </div>
         );
