@@ -47,8 +47,7 @@ class SideMenu extends React.Component {
         super();
 
         this.state = {
-            menuExpanded: false,
-            //drawerClasses: ['mui--no-user-select', 'hide-sidedrawer']
+            menuExpanded: false
         };
 
         this.showSideDrawer = this.showSideDrawer.bind(this);
@@ -59,7 +58,7 @@ class SideMenu extends React.Component {
         return (
             <div>
                 {this.state.menuExpanded && 
-                    <div id="mui-overlay" tabIndex="-1">
+                    <div id="mui-overlay" tabIndex="-1" onClick={this.hideSideDrawer}>
             <div id="sidedrawer" className="mui--no-user-select hide-sidedrawer active">
                         <MenuContent />
             </div>
@@ -82,61 +81,16 @@ class SideMenu extends React.Component {
     }
 
     showSideDrawer() {
-    /*
-        var me = this;
-        var options = {
-          onclose: function() {
-              me.hideSideDrawer();
-          }
-        };
-        
-        mui.overlay('on', options);
-        */
-    
-        this.setState({
-            //drawerClasses: ['mui--no-user-select', 'hide-sidedrawer', 'active'],
+       this.setState({
             menuExpanded: true
         });
-
     }
 
     hideSideDrawer() {
-        debugger;
-      mui.overlay('off');
         this.setState({
-            //drawerClasses: ['mui--no-user-select', 'hide-sidedrawer'],
             menuExpanded: false
         });
     }
-
-/*
-  showSidedrawer() {
-    // show overlay
-    var options = {
-      onclose: function() {
-        $sidedrawerEl
-          .removeClass('active')
-          .appendTo(document.body);
-      }
-    };
-
-    var $overlayEl = $(mui.overlay('on', options));
-
-    // show element
-    $sidedrawerEl.appendTo($overlayEl);
-    setTimeout(function() {
-      $sidedrawerEl.addClass('active');
-    }, 20);
-  }
-
-
-  hideSidedrawer() {
-    $bodyEl.toggleClass('hide-sidedrawer');
-  }
-  */
-
-  //$('.js-show-sidedrawer').on('click', showSidedrawer);
-  //$('.js-hide-sidedrawer').on('click', hideSidedrawer);
 }
 
 module.exports.SideMenu = SideMenu;
