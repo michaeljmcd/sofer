@@ -3,22 +3,10 @@ import { render } from 'react-dom';
 import Appbar from 'muicss/lib/react/appbar';
 import Container from 'muicss/lib/react/container';
 
-class SideMenu extends React.Component {
-    constructor() {
-        super();
-
-        this.state = {
-            drawerClasses: ['mui--no-user-select', 'hide-sidedrawer']
-        };
-
-        this.showSideDrawer = this.showSideDrawer.bind(this);
-        this.hideSideDrawer = this.hideSideDrawer.bind(this);
-    }
-
+class MenuContent extends React.Component {
     render() {
         return (
-            <div>
-            <div id="sidedrawer" className={this.state.drawerClasses.join(' ')}>
+        <div>
                 <div id="sidedrawer-brand" className="mui--appbar-line-height">
                   <span className="mui--text-title">Brand.io</span>
                 </div>
@@ -50,6 +38,36 @@ class SideMenu extends React.Component {
                   </li>
                 </ul>
             </div>
+        );
+    }
+}
+
+class SideMenu extends React.Component {
+    constructor() {
+        super();
+
+        this.state = {
+            menuExpanded: false,
+            //drawerClasses: ['mui--no-user-select', 'hide-sidedrawer']
+        };
+
+        this.showSideDrawer = this.showSideDrawer.bind(this);
+        this.hideSideDrawer = this.hideSideDrawer.bind(this);
+    }
+
+    render() {
+        return (
+            <div>
+                {this.state.menuExpanded && 
+                    <div id="mui-overlay" tabIndex="-1">
+            <div id="sidedrawer" className="mui--no-user-select hide-sidedrawer active">
+                        <MenuContent />
+            </div>
+                    </div>}
+                {(!this.state.menuExpanded) && 
+            <div id="sidedrawer" className="mui--no-user-select hide-sidedrawer">
+                        <MenuContent />
+            </div>}
                 <header>
                     <Appbar>
                         <Container>
@@ -64,17 +82,30 @@ class SideMenu extends React.Component {
     }
 
     showSideDrawer() {
-        //this.drawerClasses.push('active');
+    /*
+        var me = this;
+        var options = {
+          onclose: function() {
+              me.hideSideDrawer();
+          }
+        };
+        
+        mui.overlay('on', options);
+        */
+    
         this.setState({
-            drawerClasses: ['mui--no-user-select', 'hide-sidedrawer', 'active']
+            //drawerClasses: ['mui--no-user-select', 'hide-sidedrawer', 'active'],
+            menuExpanded: true
         });
 
     }
 
     hideSideDrawer() {
-        //this.drawerClasses.pop();
+        debugger;
+      mui.overlay('off');
         this.setState({
-            drawerClasses: ['mui--no-user-select', 'hide-sidedrawer']
+            //drawerClasses: ['mui--no-user-select', 'hide-sidedrawer'],
+            menuExpanded: false
         });
     }
 
@@ -103,7 +134,6 @@ class SideMenu extends React.Component {
     $bodyEl.toggleClass('hide-sidedrawer');
   }
   */
-
 
   //$('.js-show-sidedrawer').on('click', showSidedrawer);
   //$('.js-hide-sidedrawer').on('click', hideSidedrawer);
