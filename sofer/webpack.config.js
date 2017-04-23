@@ -45,7 +45,7 @@ module.exports = {
             },
             {
 				test: /\.(jpg|png|gif)$/,
-				loader: 'file-loader?outputPath=css/'
+				loader: 'file-loader?outputPath=img/'
             },
             {
                 test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
