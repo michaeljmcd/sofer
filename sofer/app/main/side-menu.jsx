@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from 'react-dom';
-import svgWithRect from 'material-design-icons/navigation/svg/production/ic_menu_36px.svg';
+import menuIcon from 'material-design-icons/navigation/svg/production/ic_menu_24px.svg';
 
 class MenuContent extends React.Component {
     constructor(props) {
@@ -68,8 +68,8 @@ class SideMenu extends React.Component {
                 <header id="header">
                     <div className="mui-appbar mui--appbar-line-height">
                         <div className="mui-container-fluid">
-                            <a className="sidedrawer-toggle mui--visible-xs-inline-block mui--visible-sm-inline-block js-show-sidedrawer" onClick={this.showSideDrawer}><img src="fonts/ic_menu_36px.svg" /></a>
-                            <a className="sidedrawer-toggle mui--hidden-xs mui--hidden-sm js-hide-sidedrawer" onClick={this.hideSideDrawer}><img src="fonts/ic_menu_36px.svg" /></a>
+                            <a className="sidedrawer-toggle mui--visible-xs-inline-block mui--visible-sm-inline-block js-show-sidedrawer" onClick={this.showSideDrawer}><img src={menuIcon} /></a>
+                            <a className="sidedrawer-toggle mui--hidden-xs mui--hidden-sm js-hide-sidedrawer" onClick={this.hideSideDrawer}><img src={menuIcon} /></a>
                               <span className="mui--text-title mui--visible-xs-inline-block mui--visible-sm-inline-block">Sofer</span>
                         </div>
                      </div>
