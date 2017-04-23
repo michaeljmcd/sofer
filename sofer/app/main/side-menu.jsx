@@ -4,9 +4,13 @@ import Appbar from 'muicss/lib/react/appbar';
 import Container from 'muicss/lib/react/container';
 
 class MenuContent extends React.Component {
+    constructor(props) {
+        super(props);
+    }
+
     render() {
         return (
-        <div>
+            <div id="sidedrawer" className={(this.props.isExpanded ? "active" : "") + " mui--no-user-select hide-sidedrawer"}>
                 <div id="sidedrawer-brand" className="mui--appbar-line-height">
                   <span className="mui--text-title">Brand.io</span>
                 </div>
@@ -59,14 +63,9 @@ class SideMenu extends React.Component {
             <div>
                 {this.state.menuExpanded && 
                     <div id="mui-overlay" tabIndex="-1" onClick={this.hideSideDrawer}>
-            <div id="sidedrawer" className="mui--no-user-select hide-sidedrawer active">
-                        <MenuContent />
-            </div>
+                        <MenuContent isExpanded={this.state.menuExpanded} />
                     </div>}
-                {(!this.state.menuExpanded) && 
-            <div id="sidedrawer" className="mui--no-user-select hide-sidedrawer">
-                        <MenuContent />
-            </div>}
+                {(!this.state.menuExpanded) && <MenuContent isExpanded={this.state.menuExpanded} />}
                 <header>
                     <Appbar>
                         <Container>
