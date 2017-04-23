@@ -1,5 +1,6 @@
 var webpack = require('webpack'),
     ExtractTextPlugin = require('extract-text-webpack-plugin'),
+    svgLoader = require('svg-inline-loader'),
     path = require('path');
 
 var APP_DIR = path.resolve(__dirname, 'app');
@@ -31,7 +32,12 @@ module.exports = {
                 test: /\.css$/,
                 loader: ExtractTextPlugin.extract('css-loader')
             },
-
+            /*
+            {
+                test: /ic_.*\.svg$/,
+                loader: 'file-loader?outputPath=img/&name=[name].[ext]'
+            },
+            */
             {
                 test: /\.jsx?/,
                 include: APP_DIR,

@@ -1,5 +1,6 @@
 import React from 'react';
 import { render } from 'react-dom';
+import svgWithRect from 'material-design-icons/navigation/svg/production/ic_menu_36px.svg';
 
 class MenuContent extends React.Component {
     constructor(props) {
@@ -10,7 +11,7 @@ class MenuContent extends React.Component {
         return (
             <div id="sidedrawer" className={(this.props.isExpanded ? "active" : "") + " mui--no-user-select hide-sidedrawer"}>
                 <div id="sidedrawer-brand" className="mui--appbar-line-height">
-                  <span className="mui--text-title">Brand.io</span>
+                  <span className="mui--text-title">Sofer</span>
                 </div>
                 <div className="mui-divider"></div>
                 <ul>
@@ -67,8 +68,8 @@ class SideMenu extends React.Component {
                 <header id="header">
                     <div className="mui-appbar mui--appbar-line-height">
                         <div className="mui-container-fluid">
-                              <a className="sidedrawer-toggle mui--visible-xs-inline-block mui--visible-sm-inline-block js-show-sidedrawer" onClick={this.showSideDrawer}>☰</a>
-                              <a className="sidedrawer-toggle mui--hidden-xs mui--hidden-sm js-hide-sidedrawer" onClick={this.hideSideDrawer}>☰</a>
+                            <a className="sidedrawer-toggle mui--visible-xs-inline-block mui--visible-sm-inline-block js-show-sidedrawer" onClick={this.showSideDrawer}><img src="fonts/ic_menu_36px.svg" /></a>
+                            <a className="sidedrawer-toggle mui--hidden-xs mui--hidden-sm js-hide-sidedrawer" onClick={this.hideSideDrawer}><img src="fonts/ic_menu_36px.svg" /></a>
                               <span className="mui--text-title mui--visible-xs-inline-block mui--visible-sm-inline-block">Sofer</span>
                         </div>
                      </div>
