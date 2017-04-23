@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from 'react-dom';
-import menuIcon from 'material-design-icons/navigation/svg/production/ic_menu_24px.svg';
+import menuIcon from 'material-design-icons/navigation/drawable-hdpi/ic_menu_white_24dp.png';
 
 class MenuContent extends React.Component {
     constructor(props) {
