@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from 'react-dom';
-import menuIcon from 'material-design-icons/navigation/drawable-hdpi/ic_menu_white_24dp.png';
+import menuIcon from 'material-design-icons/navigation/drawable-hdpi/ic_menu_white_18dp.png';
 
 class MenuContent extends React.Component {
     constructor(props) {
@@ -68,9 +68,9 @@ class SideMenu extends React.Component {
                 <header id="header">
                     <div className="mui-appbar mui--appbar-line-height">
                         <div className="mui-container-fluid">
-                            <a className="sidedrawer-toggle mui--visible-xs-inline-block mui--visible-sm-inline-block js-show-sidedrawer" onClick={this.showSideDrawer}><img src={menuIcon} /></a>
-                            <a className="sidedrawer-toggle mui--hidden-xs mui--hidden-sm js-hide-sidedrawer" onClick={this.hideSideDrawer}><img src={menuIcon} /></a>
-                              <span className="mui--text-title mui--visible-xs-inline-block mui--visible-sm-inline-block">Sofer</span>
+                            <a className="sidedrawer-toggle mui--visible-xs-inline-block mui--visible-sm-inline-block js-show-sidedrawer" onClick={this.showSideDrawer}><img src={menuIcon} className="menu-icon" /></a>
+                            <a className="sidedrawer-toggle mui--hidden-xs mui--hidden-sm js-hide-sidedrawer" onClick={this.hideSideDrawer}><img src={menuIcon}  className="menu-icon" /></a>
+                            <span className="mui--text-title mui--visible-xs-inline-block mui--visible-sm-inline-block menu-icon">Sofer</span>
                         </div>
                      </div>
                  </header>
