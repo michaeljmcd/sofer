@@ -189,6 +189,13 @@ We will address each of the features exposed by this menu in turn.
 
 #### Spell Check ####
 
+An important part in preparing an etext is the ability to perform spell checks. This
+helps, both in terms of general editing but also in terms of a search for common
+scanos. As such, Sofer will provide support for performing spell checks from
+the editor.
+
+Upon selecting the Spell Check option from 
+
 #### Insert Image from Scan ####
 
 Some etexts cannot really be presented
