@@ -1,5 +1,6 @@
 import React from 'react';
 import { render } from 'react-dom';
+import { Link } from 'react-router-dom';
 import menuIcon from 'material-design-icons/navigation/drawable-hdpi/ic_menu_white_18dp.png';
 
 class MenuContent extends React.Component {
@@ -18,7 +19,7 @@ class MenuContent extends React.Component {
                   <li>
                     <strong>Project</strong>
                     <ul>
-                      <li><a href="#">New Project...</a></li>
+                        <li><Link to="/new-project">New Project...</Link></li>
                       <li><a href="#">Open...</a></li>
                     </ul>
                   </li>
