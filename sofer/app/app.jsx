@@ -1,5 +1,6 @@
 import React from 'react';
 import { render } from 'react-dom';
+import { HashRouter, Route } from 'react-router-dom';
 
 import { Main } from './main/main.jsx';
 import { SideMenu } from './main/side-menu.jsx';
@@ -14,6 +15,9 @@ class App extends React.Component {
             <div>
                 <SideMenu />
                 <Main />
+                  <HashRouter>
+                      <Route path='/' component={Main} />
+                  </HashRouter>
                 <Footer />
              </div>);
     }

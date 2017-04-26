@@ -9,16 +9,21 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start-webpack": "webpack -w",
+    "webpack": "./node_modules/webpack/bin/webpack.js --config webpack.config.js",
+    "cordova-server": "cordova serve",
+    "start": "npm run webpack && npm run cordova-server",
     "dev-server": "./node_modules/.bin/webpack-dev-server"
   },
   "author": "Michael McDermott",
   "license": "MIT",
   "dependencies": {
+    "history": "^4.6.1",
     "material-design-icons": "^3.0.1",
     "muicss": "^0.9.15",
     "react": "^15.5.3",
-    "react-dom": "^15.5.3"
+    "react-dom": "^15.5.3",
+    "react-router": "^4.1.1",
+    "react-router-dom": "^4.1.1"
   },
   "devDependencies": {
     "babel-core": "^6.24.1",

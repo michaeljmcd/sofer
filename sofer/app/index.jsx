@@ -17,7 +17,6 @@
  * under the License.
  */
 
-import { default as $ } from 'jquery';
 import { render } from 'react-dom';
 import { App } from './app.jsx';
 import 'react';
@@ -34,6 +33,8 @@ var app = {
     // 'pause', 'resume', etc.
     onDeviceReady: function() {
         render(<App />, document.getElementById('app'));
+        //render(history.getCurrentLocation(), document.getElementById('app')); 
+        //history.listen(render);
     }
 };
 
